@@ -12,7 +12,9 @@ body {
   background-color: #ffffff;
 }
 
-h1, h2, p {
+h1,
+h2,
+p {
   margin: 0;
 }
 
@@ -26,7 +28,7 @@ img {
   display: block;
 }
 
-.bd-grid {
+.bd-grid, .header, .nFound {
   max-width: 1024px;
   display: -ms-grid;
   display: grid;
@@ -35,4 +37,81 @@ img {
   width: calc(100% - 2rem);
   margin-left: 1rem;
   margin-right: 1rem;
+}
+
+.section {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.l-header {
+  width: 100%;
+}
+
+.header {
+  height: 3rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__title {
+  font-family: "Inconsolata", monospace;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333333;
+  letter-spacing: -0.08em;
+}
+
+.nFound {
+  row-gap: 3.75rem;
+}
+
+.nFound__img {
+  width: 285px;
+  margin: auto;
+}
+
+.nFound__title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #333333;
+  letter-spacing: -0.035em;
+}
+
+@media screen and (max-width: 767.99px) {
+  .nFound__title br {
+    display: none;
+  }
+}
+
+.nFound__text {
+  font-size: 1.125rem;
+  color: #4f4f4f;
+  margin: 1.875rem 0 4rem;
+}
+
+.nFound__btn {
+  display: inline-block;
+  background-color: #333333;
+  color: #fff;
+  padding: 1.5rem 2.75rem;
+  text-transform: uppercase;
+  letter-spacing: -0.035em;
+  cursor: pointer;
+}
+
+.footer {
+  margin-top: 6.875rem;
+  height: 2rem;
+  text-align: center;
+}
+
+.footer__text {
+  font-size: 0.875rem;
+  color: #bdbdbd;
+}
+
+.footer__text a {
+  color: #7732e6;
 }

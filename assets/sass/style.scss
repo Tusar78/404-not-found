@@ -5,36 +5,125 @@
 *,
 ::before,
 ::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: $body-font;
-    font-size: $normal-font-size;
-    background-color: $white-color;
+  font: {
+    family: $body-font;
+    size: $normal-font-size;
+  }
+  background-color: $white-color;
 }
 
-h1, h2, p {
-    margin: 0;
+h1,
+h2,
+p {
+  margin: 0;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 // Reuseable Class
 .bd-grid {
-    max-width: 1024px;
-    display: grid;
-    column-gap: 2rem;
-    width: calc(100% - 2rem);
-    margin-left: 1rem;
-    margin-right: 1rem;
+  max-width: 1024px;
+  display: grid;
+  column-gap: 2rem;
+  width: calc(100% - 2rem);
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
+.section {
+  margin: {
+    top: 3rem;
+    bottom: 2rem;
+  }
+}
+
+// Header Area
+.l-header {
+  width: 100%;
+}
+
+.header {
+  @extend .bd-grid;
+  height: $header-height;
+  align-items: center;
+}
+
+.header__title {
+  font: {
+    family: $heading-font;
+    size: 1.5rem;
+    weight: $bold;
+  }
+  color: $dark-gray;
+  letter-spacing: -0.08em;
+}
+
+// Main Section
+.nFound {
+  @extend .bd-grid;
+  row-gap: 3.75rem;
+}
+
+.nFound__img {
+  width: 285px;
+  margin: auto;
+}
+
+.nFound__title {
+  font: {
+    size: $big-font-size;
+    weight: $bold;
+  }
+  color: $dark-gray;
+  letter-spacing: -0.035em;
+
+  @media screen and (max-width: 767.99px) {
+    br {
+      display: none;
+    }
+  }
+}
+
+.nFound__text {
+  font-size: $medium-font-size;
+  color: $light-gray;
+  margin: 1.875rem 0 4rem;
+}
+
+.nFound__btn {
+  display: inline-block;
+  background-color: $dark-gray;
+  color: #fff;
+  padding: 1.5rem 2.75rem;
+  text-transform: uppercase;
+  letter-spacing: -0.035em;
+  cursor: pointer;
+}
+
+// Footer Section
+.footer {
+  margin-top: 6.875rem;
+  height: 2rem;
+  text-align: center;
+}
+
+.footer__text {
+  font-size: $small-font-size;
+  color: $light-color;
+
+  a {
+    color: #7732e6;
+  }
+}
