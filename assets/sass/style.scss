@@ -1,0 +1,40 @@
+// Import variables.
+@import "partials/variable";
+
+// Base
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $body-font;
+    font-size: $normal-font-size;
+    background-color: $white-color;
+}
+
+h1, h2, p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+// Reuseable Class
+.bd-grid {
+    max-width: 1024px;
+    display: grid;
+    column-gap: 2rem;
+    width: calc(100% - 2rem);
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+

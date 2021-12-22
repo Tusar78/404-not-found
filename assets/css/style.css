@@ -1,1 +1,38 @@
-/* No CSS */
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&family=Space+Mono:wght@400;700&display=swap");
+*,
+::before,
+::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  font-size: 1rem;
+  background-color: #ffffff;
+}
+
+h1, h2, p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.bd-grid {
+  max-width: 1024px;
+  display: -ms-grid;
+  display: grid;
+  -webkit-column-gap: 2rem;
+          column-gap: 2rem;
+  width: calc(100% - 2rem);
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
