@@ -44,8 +44,15 @@ img {
 
 .section {
   margin: {
-    top: 3rem;
-    bottom: 2rem;
+    top: 4rem;
+    bottom: 3rem;
+  }
+
+  @media screen and (max-width: 767.99px) {
+    margin: {
+      top: 3rem;
+      bottom: 2rem;
+    }
   }
 }
 
@@ -58,6 +65,7 @@ img {
   @extend .bd-grid;
   height: $header-height;
   align-items: center;
+  margin: auto;
 }
 
 .header__title {
@@ -89,7 +97,7 @@ img {
   color: $dark-gray;
   letter-spacing: -0.035em;
 
-  @media screen and (max-width: 767.99px) {
+  @media screen and (max-width: 525.99px) {
     br {
       display: none;
     }
@@ -125,5 +133,36 @@ img {
 
   a {
     color: #7732e6;
+  }
+}
+
+// Media Queries
+@media screen and (min-width: 768px) {
+  .nFound {
+    grid-template-columns: 50% 50%;
+    column-gap: 0;
+  }
+
+  .nFound__img {
+    width: 95%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .nFound {
+    column-gap: 0;
+  }
+}
+
+@media screen and (min-width: 1026px) {
+  .nFound {
+    margin: auto;
+    grid-template-columns: 540px auto;
+    row-gap: 0;
+  }
+
+  .nFound__img {
+    width: 85%;
+    margin: 0;
   }
 }
