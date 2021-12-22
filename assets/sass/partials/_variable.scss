@@ -1,0 +1,22 @@
+// Add Two Fonts 'space mono' & 'inconsolata' from google fonts.
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&family=Space+Mono:wght@400;700&display=swap");
+
+//Colors
+$dark-gray: #333333;
+$light-gray: #4f4f4f;
+$light-color: #bdbdbd;
+$white-color: #ffffff;
+
+// Fonts & typography
+$heading-font: "Inconsolata", monospace;
+$body-font: "Space Mono", monospace;
+$big-font-size: 3rem;
+$medium-font-size: 1.125rem;
+$normal-font-size: 1rem;
+$small-font-size: 0.875rem;
+
+// Base media Queries
+@media screen and (max-width: 767.99px) {
+  $big-font-size: 4rem;
+  $medium-font-size: 1.5rem;
+}
